@@ -1,0 +1,792 @@
+@import 'global';
+@import 'var';
+
+.header{
+  background-image: url('../images/header-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  &__inner{
+    height: 100vh;
+    position: relative;
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding-top: 16px;
+    align-items: center;
+  }
+  &__order-box{
+    display: flex;
+    align-items: center;
+  }
+  &__order-description {
+    padding-right: 19px;
+  }
+  &__order-button{
+    padding: 12px 31px;
+    background-color: $btn-color;
+    border-radius: 22px;
+  }
+
+  &__menu{
+    margin-top: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    height: 70px;
+    align-items: center;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  &__title{
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 130%;
+    color: #1F1E1E;
+    text-align: center;
+    margin: 49px 0 0 0;
+    
+  }
+  &__bot{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    img{
+      display: block;
+    }
+    h4{
+      max-width: 422px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 140%;
+    }
+    &-btn{
+      color: #fff;
+      text-align: center;
+      padding: 19px 54px;
+      font-size: 18px;
+      line-height: 21px;
+      border-radius: 30px;
+      border: none;
+      background-color: $btn-color;
+      margin-top: 20px;
+    }
+    img{
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.countries{
+  img{
+    display: block;
+  }
+  &__inner{
+    padding: 100px 0;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: 256px 256px 256px 256px;
+    grid-template-rows: auto;
+    column-gap: 31px;
+    row-gap: 32px;
+  }
+  &__item-title{
+    padding: 12px 0 19px 19px;
+    border: 1px solid #D9D9DE;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+  }
+}
+
+.services{
+  background-image: url('../images/services-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 32px 0 51px 0;
+  color: #fff;
+  text-decoration: none;
+  h4{
+    font-weight: 400;
+  }
+  &__title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 130%;
+  }
+  &__items{
+    padding-top: 52px;
+    display: grid;
+    grid-template-columns: 232px 232px 232px 232px;
+    grid-template-rows: auto;
+    column-gap: 53px;
+    row-gap: 67px;
+  }
+  &__item-img{
+    margin-bottom: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+  }
+  &__item-title{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+  }
+}
+
+
+.offers{
+  padding: 67px 0 82px 0;
+  border-bottom: 1px solid #D9D9DE;
+  &__title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: $black;
+    text-align: center;
+  }
+  &__items{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 32px;
+  }
+  &__item{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 256px;
+    color: #fff;
+    padding: 16px 0 19px 16px;
+  }
+  &__item:nth-child(3),&__item:nth-child(6){
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &__item-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+  }
+  &__item-price{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    margin-top: auto;
+  }
+  &__item-description,&__item-days{
+    padding-top: 15px;
+  }
+}
+
+.about{
+  padding: 100px 0;
+  &__top{
+    padding-bottom: 100px;
+    &-title{
+      text-align: center;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 130%;
+      color: $black;
+      padding-bottom: 100px;
+    }
+  }
+  &__bot{
+    display: flex;
+    justify-content: space-between;
+    &-description{
+      &-title{
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: $black;
+        padding-bottom: 25px;
+      }
+      &-text{
+        max-width: 448px;
+        font-size: 18px;
+        line-height: 140%;
+        color: $black;
+        padding-bottom: 24px;
+      }
+      &-link{
+        line-height: 19px;
+        text-decoration-line: underline;
+        color: #C4C4C4;
+      }
+    }
+      &-video{
+        background-image: url('../images/about-video.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        max-width: 640px;
+        max-height: 400px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      &-icon{
+        margin: 0 auto;
+      }
+  }
+}
+
+.gallery{
+  background-color: $btn-color;
+  padding: 49px 0 106px;
+  color: #fff;
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 39px;
+    align-items: center;
+  }
+  &__link{
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 130%;  
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 32px;
+  }
+}
+
+.tour{
+  padding: 100px 0;
+  color: $black;
+  &__title{
+    margin-bottom: 77px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__text{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 86px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+  }
+  &__text1{
+    max-width: 535px;
+  }
+  span{
+    font-weight: 700;
+  }
+  &__text2{
+    max-width: 541px;
+  }
+  &__items{
+    border-top: 1px solid #C4C4C4;;
+    display: flex;
+    padding-top: 44px;
+    text-align: center;
+    gap: 70px;
+  }
+  &__item4{
+    min-width: 277px;
+  }
+  &__item-title{
+    font-family: 'PT Serif';
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 130%;
+    color: #886239;
+  }
+  &__item-description{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
+
+.booking{
+  padding: 75px 0;
+  background-color: #EAEAEA;
+  color: $black;
+  &__inner{
+    padding: 0 146px 0 142px;
+  }
+  &__title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 130%;
+  }
+  &__form{
+    padding-top: 43px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px ;
+  }
+  &__form-input{
+    min-width: 256px;
+    min-height: 44px;
+    padding-left: 14px;
+    border: none;
+    border-color: #C4C4C4;
+  }
+  &__form-input::placeholder{
+    color: #C4C4C4;
+  }
+  &__form-input4{
+    width: 100%;
+    padding: 14px 0 77px 14px;
+  }
+  &__agreement{
+    margin-top: 67px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn{
+    padding: 20px 65px;
+    background: $btn-color;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+  }
+  &__checkbox{
+    display: flex;
+  }
+  &__checkbox-link{
+    align-self: center;
+    margin-left: 19px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-decoration-line: underline;
+  }
+  &__checkbox-btn{
+    align-self: center;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #C4C4C4;
+    border-radius: 2px;
+    background-color: transparent;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+
+.footer{
+  background-color: $black;
+  color: #fff;
+  padding: 77px 0 81px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  &__logo{
+    display: block;
+    text-align: center;
+  }
+  &__box{
+    margin-top: 69px;
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+  }
+  &__rights{
+    max-width: 225px;
+    &-title{
+      margin-bottom: 9px;
+    }
+    &-text{
+      margin-bottom: 3px;
+      opacity: 0.8;
+    }
+    &-link{
+      text-decoration: underline;
+    }
+  }
+  &__adress{
+    max-width: 164px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-link{
+      opacity: 0.8;
+    }
+  }
+  &__order{
+    max-width: 209px;
+    &-title{
+      margin-bottom: 9px;
+    }
+    &-tel{
+      margin-bottom: 3px;
+      display: block;
+    }
+    &-tel , &-mail{
+      opacity: 0.8;
+    }
+  }
+}
+
+
+
+// сделать адаптив по 5 бреикпонитам ,а именно: 
+// 1. 992px
+// 2. 768px
+// 3. 640px
+// 4. 320px
+
+@media (max-width: 1120px) {
+  .container{
+    padding: 0 20px;
+  }
+  .header{
+    &__menu{
+      gap: 90px;
+    }
+    &__title{
+      font-size: 70px;
+    }
+    &__order-button{
+      padding: 7px 14px;
+    }
+  }
+  .countries{
+    &__items{
+      grid-template-columns: 256px 256px 256px;
+      justify-content: center;
+      padding: 0 20px;
+    } 
+  }
+  .services{
+    &__items{
+    grid-template-columns: 232px 232px 232px;
+    justify-content: center;
+    text-align: center;
+    }
+    &__item-last{
+      display: none;
+    }
+    &__item-img{
+      width: 88px;
+      height: 88px;
+    }
+    &__item-last{
+      display: none;
+    }
+  }
+  .offers{
+    &__items{
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+  .about{
+    &__top-link{
+      img{
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+    &__top-title{
+      padding-bottom: 50px;
+    }
+  }
+  .gallery{
+    &__inner{
+      margin: 0 auto;
+    }
+    &__items{
+      grid-template-columns: repeat(2 , 1fr);
+    }
+    &__item{
+      width: 100%;
+    }
+  }
+  .services{
+    &__items{
+      grid-template-columns: 232px 232px;
+    }
+  }
+  .offers{
+    &__item{
+      min-height: 180px;
+      &-title{
+        font-size: 16px;
+      }
+    }
+  }
+  .about{
+    &__bot{
+      flex-direction: column;
+      &-video{
+        order: -1;
+        min-height: 400px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .tour{
+    &__text{
+      flex-direction: column;
+    }
+    &__items{
+      display: grid;
+      grid-template-columns: repeat(2 , 1fr);
+    }
+  }
+  .booking{
+    &__form-input{
+      min-width: 450px;
+    }
+    &__btn{
+      padding: 5px 40px;
+    }
+    &__checkbox{
+      margin-left: 70px;
+    }
+  }
+  .footer{
+    &__box{
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .countries{
+    &__items{
+      grid-template-columns: 256px 256px;
+    }
+  }
+  .header__menu{
+    gap: 60px;
+  }
+  .header__bot{
+    text-align: center;
+    &-text{
+      display: none;
+    }
+  }
+}
+@media (max-width: 640px) {
+  .header__menu{
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .header__order-box{
+    display: block;
+    text-align: center;
+  }
+  .header__order-description{
+    padding-bottom: 10px;
+  }
+  .booking__form-input{
+    min-width: 285px;
+  }
+  .offers__item{
+    min-height: 135px;
+  }
+  .about__top{
+    display: none;
+  }
+  .booking__agreement{
+    flex-direction: column;
+  }
+  .booking__btn{
+    padding: 10px 40px;
+  }
+  .booking__checkbox{
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .footer__box{
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__adress{
+    max-width: 210px;
+  }
+}
+@media (max-width: 425px) {
+  .header{
+    &__top{
+      flex-direction: column;
+    }
+    &__logo{
+      margin-bottom: 20px;
+    }
+    &__order-description{
+      padding-right: 0;
+    }
+    &__order-button{
+      width: 200px;
+    }
+    &__title{
+      font-size: 50px;
+    }
+    &__menu{
+      gap: 8px;
+      height: 50px;
+    }
+    &__bot{
+      text-align: center;
+      &-text{
+        display: none;
+      }
+    }
+  }
+  .countries{
+    &__inner{
+      padding: 40px 0;
+    }
+    &__items{
+      display: flex;
+      flex-direction: column;
+    }
+    &__item-img{
+      width: 100%;
+    }
+    &__item-last{
+      display: block;
+    }
+  }
+  .services{
+    &__items{
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    &__item-last{
+      display: block;
+    }
+  }
+  .offers{
+    &__items{
+      grid-template-columns: repeat(2 , 1fr);
+    }
+  }
+  .about{
+      padding: 40px 0;
+    &__top{
+      display: none;
+    }
+    &__bot-video{
+      min-height: 260px;
+    }
+  }
+  .gallery{
+    padding: 20px 0;
+    &__title{
+      font-size: 24px;
+    }
+  }
+  .tour{
+    padding: 20px 0;
+    &__title{
+      margin-bottom: 30px;
+    }
+    &__text{
+      padding-bottom: 20px;
+    }
+    &__items{
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  .booking{
+    &__inner{
+      padding: 0;
+    }
+    &__form-input{
+      min-width: 335px;
+    }
+    &__agreement{
+      flex-direction: column;
+    }
+    &__btn{
+      margin-bottom: 30px;
+      padding: 10px 0;
+      width: 200px;
+    }
+    &__checkbox{
+      margin-left: 0;
+      &-btn{
+        width: 16px;
+        height: 16px;
+      }
+      &-link{
+        margin-left: 10px;
+        width: 200px;
+      }
+    }
+  }
+  .footer{
+    &__box{
+      flex-direction: column;
+      align-items: center;
+    }
+    &__rights, &__adress , &__order{
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .header{
+    &__menu{
+      flex-wrap: wrap;
+    }
+  }
+  .offers__item{
+    min-height: 135px;
+  }
+  .about__bot-video{
+    min-height: 165px;
+  }
+  .services__title{
+    font-size: 24px;
+  }
+  .gallery__title{
+    font-size: 24px;
+  }
+  .gallery__link{
+    font-size: 12px;
+  }
+  .booking__form-input {
+    min-width: 280px;
+  } 
+}
+
+// Остались копейки, допелить адаптив под 320 
+//  также хедер меню для разных разрешений( не хочет тянуться)
